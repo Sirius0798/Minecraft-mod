@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 690,
+  "experience": 100,
+  "group": "snowgoomba",
+  "ingredient": {
+    "item": "testmod:snowgoombah"
+  },
+  "result": "testmod:snowgoomba"
+}

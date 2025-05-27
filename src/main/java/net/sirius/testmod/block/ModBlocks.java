@@ -1,10 +1,12 @@
 package net.sirius.testmod.block;
 
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.entity.ai.behavior.Behavior;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -12,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sirius.testmod.TestMod;
+import net.sirius.testmod.block.custom.SoundBlock;
 import net.sirius.testmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -21,7 +24,11 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, TestMod.MODID);
 
     public static final RegistryObject<Block> SNOWGOOMBLOCK = registerBlock("snowgoomblock",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SNOW_BLOCK).sound(SoundType.ANVIL)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SNOW_BLOCK).strength(10F).sound(SoundType.ANVIL)));
+    public static  final RegistryObject<Block> SNOWGOOMBORE = registerBlock("snowgoombore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).sound(SoundType.POWDER_SNOW).strength(3F).requiresCorrectToolForDrops(), UniformInt.of(10, 60)));
+    public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.NOTE_BLOCK)));
 
     private  static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

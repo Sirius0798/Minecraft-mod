@@ -12,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.sirius.testmod.TestMod;
 import net.sirius.testmod.block.ModBlocks;
+import net.sirius.testmod.item.custom.MetalDetectorItem;
 
 public class ModCreativeModTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MOD_TABS =
@@ -24,7 +25,9 @@ public class ModCreativeModTab {
                         for(RegistryObject<Item> item: ModItems.ITEMS.getEntries()){
                             output.accept(item.get());
                         }
-                        output.accept(ModBlocks.SNOWGOOMBLOCK.get());
+                        for(RegistryObject<Block> block: ModBlocks.BLOCKS.getEntries()){
+                            output.accept(block.get());
+                        }
                         output.accept(Items.DRAGON_EGG);
                     })
                     .build());

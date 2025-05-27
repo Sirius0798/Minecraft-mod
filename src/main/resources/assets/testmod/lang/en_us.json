@@ -1,7 +1,14 @@
 {
   "item.testmod.snowgoomba": "Snow Goomba",
   "item.testmod.snowgoombah": "Snow Goombah",
+
+  "item.testmod.metal_detector": "Metal Detector",
+  "item.testmod.metal_detector_two": "Metal Detector 2.0",
+  "item.testmod.gb": ":gb:",
+
   "block.testmod.snowgoomblock": "Snowgoomblock",
+  "block.testmod.snowgoombore": "Snowgoombore",
+  "block.testmod.sound_block": "Sound Block",
 
   "creativetab.test_tab": "Test Tab"
 }
