@@ -1,0 +1,4 @@
+// 1.20.1	2025-05-28T12:26:48.9249769	Loot Tables
+65445fe923179d2612ad1e8c0eee1037d945795c data/testmod/loot_tables/blocks/snowgoomblock.json
+57491b8246ddfdcd3e9638075ed3f3ac9245d439 data/testmod/loot_tables/blocks/snowgoombore.json
+26c8e5f0e5177a0abdcb57c0889b568c1c6fb50f data/testmod/loot_tables/blocks/sound_block.json

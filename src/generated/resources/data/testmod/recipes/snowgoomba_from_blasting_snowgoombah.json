@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 100.0,
+  "group": "snowgoomba",
+  "ingredient": {
+    "item": "testmod:snowgoombah"
+  },
+  "result": "testmod:snowgoomba"
+}

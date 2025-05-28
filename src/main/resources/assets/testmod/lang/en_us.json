@@ -5,10 +5,14 @@
   "item.testmod.metal_detector": "Metal Detector",
   "item.testmod.metal_detector_two": "Metal Detector 2.0",
   "item.testmod.gb": ":gb:",
+  "item.testmod.snowgoombrah": "Snow Goombrah",
 
   "block.testmod.snowgoomblock": "Snowgoomblock",
   "block.testmod.snowgoombore": "Snowgoombore",
   "block.testmod.sound_block": "Sound Block",
+
+  "tooltip.testmod.metal_detector.tooltip": "Found valuables underground! (Iron, Gold)",
+  "tooltip.testmod.metal_detector_two.tooltip": "Found valuables underground! (Every Ores)",
 
   "creativetab.test_tab": "Test Tab"
 }

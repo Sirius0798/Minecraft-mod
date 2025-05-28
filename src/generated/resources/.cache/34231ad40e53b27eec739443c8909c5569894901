@@ -1,0 +1,5 @@
+// 1.20.1	2025-05-28T12:26:48.9229854	Tags for minecraft:block mod id testmod
+55bfadd09313e89fd466fcab8a5f66faf6431426 data/minecraft/tags/blocks/mineable/pickaxe.json
+55bfadd09313e89fd466fcab8a5f66faf6431426 data/minecraft/tags/blocks/needs_diamond_tool.json
+a0d18c3874db4c973338e4709546b73032639b92 data/testmod/tags/blocks/metal_detector_two_valuables.json
+8af3142f1f5abb971263163a42a06f9b8093cd1a data/testmod/tags/blocks/metal_detector_valuables.json

@@ -6,6 +6,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sirius.testmod.TestMod;
+import net.sirius.testmod.item.custom.FuelItem;
 import net.sirius.testmod.item.custom.MetalDetectorItem;
 
 public class ModItems {
@@ -23,6 +24,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> GB = ITEMS.register("gb",
             () -> new Item(new Item.Properties().food(ModFoods.GB)));
+
+    public static final RegistryObject<Item> SNOWGOOMBRAH = ITEMS.register("snowgoombrah",
+            () -> new FuelItem(new Item.Properties(), 690));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

@@ -6,11 +6,18 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.sirius.testmod.block.ModBlocks;
+import net.sirius.testmod.util.ModTags;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.List;
 
 public class MetalDetectorItem extends Item {
     private int tier=1;
@@ -49,15 +56,25 @@ public class MetalDetectorItem extends Item {
         return InteractionResult.SUCCESS;
     }
 
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        if (tier == 2){
+            pTooltipComponents.add(Component.translatable("tooltip.testmod.metal_detector_two.tooltip"));
+        } else {
+            pTooltipComponents.add(Component.translatable("tooltip.testmod.metal_detector.tooltip"));
+        }
+        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
+    }
+
     private void outputValuableCoordinate(BlockPos blockPos, Player player, Block block) {
         player.sendSystemMessage(Component.literal("Found " + I18n.get(block.getDescriptionId()) + " at " + "(" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"));
     }
 
     private boolean isValuableBlock(BlockState state) {
         if (tier == 2) {
-            return state.is(Blocks.IRON_ORE) || state.is(Blocks.GOLD_ORE) || state.is(Blocks.EMERALD_ORE) || state.is(ModBlocks.SNOWGOOMBORE.get());
+            return state.is(ModTags.Blocks.METAL_DETECTOR_TWO_VALUABLES);
         } else {
-            return state.is(Blocks.IRON_ORE) || state.is(Blocks.GOLD_ORE);
+            return state.is(ModTags.Blocks.METAL_DETECTOR_VALUABLES);
         }
     }
 }

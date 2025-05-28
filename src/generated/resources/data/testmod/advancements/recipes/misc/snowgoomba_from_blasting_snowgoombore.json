@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_snowgoombore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "testmod:snowgoombore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testmod:snowgoomba_from_blasting_snowgoombore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_snowgoombore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testmod:snowgoomba_from_blasting_snowgoombore"
+    ]
+  },
+  "sends_telemetry_event": false
+}
